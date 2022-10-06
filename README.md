@@ -1,1 +1,2 @@
 # TestTaskGooglePhoto
+# Примерный интерфейс
