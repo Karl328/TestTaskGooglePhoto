@@ -21,6 +21,7 @@ API, который должен возвращать результат, опи
 <li><a href="https://github.com/onevcat/Kingfisher?ysclid=l8wxav3wa5923536464">Kingfisher </a> </li>
 
 # Детали реализации
-IOS 15
-SwiftU, MVVM
+<li>IOS 15</li>
+<li>SwiftUI </li>
+<li>MVVM</li>
 
