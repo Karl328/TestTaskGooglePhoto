@@ -20,4 +20,7 @@ API, который должен возвращать результат, опи
 У вас должны быть установлены SPM:
 <li><a href="https://github.com/onevcat/Kingfisher?ysclid=l8wxav3wa5923536464">Kingfisher </a> </li>
 
+# Детали реализации
+IOS 15
+SwiftU, MVVM
 
