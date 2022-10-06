@@ -15,6 +15,6 @@ API, который должен возвращать результат, опи
 # Экраны
 <img src="https://user-images.githubusercontent.com/102364472/194290836-7cd2fb05-08cb-4adf-b189-d9dadf8062d0.gif" width="200" />
 # Установка
-У вас должны быть установлены SPM:<\br>
+У вас должны быть установлены SPM: <\br>
 - **<a href="https://github.com/onevcat/Kingfisher?ysclid=l8wxav3wa5923536464">Kingfisher </a>
 
