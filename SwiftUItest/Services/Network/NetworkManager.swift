@@ -12,9 +12,9 @@ final class ApiCaller {
     
     private init() {}
     
-    public func makeAPIRequest<T: Decodable>(with urlString: String,
-                                             _ successDataType: T.Type,
-                                             _ completionHandler: @escaping (Result<T, Error>) -> Void) {
+    func makeAPIRequest<T: Decodable>(with urlString: String,
+                                      _ successDataType: T.Type,
+                                      _ completionHandler: @escaping (Result<T, Error>) -> Void) {
         guard let url = URL(string: urlString) else { return }
         
         let task = URLSession.shared.dataTask(with: url) { result, _, error in
