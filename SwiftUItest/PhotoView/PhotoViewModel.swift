@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PhotoViewModel: ObservableObject {
+final class PhotoViewModel: ObservableObject {
     @Published var resultsArray = [PhotoModel]()
     @Published var isLoading = false
     func search(text: String) {
@@ -18,7 +18,6 @@ class PhotoViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     defer {self.isLoading = false }
                     self.resultsArray = [data]
-                    
                 }
             case .failure(let error):
                 print(error)

@@ -7,8 +7,10 @@
 
 import Foundation
 
-open class ApiCaller {
+final class ApiCaller {
     static let shared = ApiCaller()
+    
+    private init() {}
     
     public func makeAPIRequest<T: Decodable>(with urlString: String,
                                              _ successDataType: T.Type,
@@ -23,7 +25,8 @@ open class ApiCaller {
             
             var decodedResult: T
             do {
-                decodedResult = try JSONDecoder().decode(T.self, from: data)
+                let decoder = JSONDecoder()
+                decodedResult = try decoder.decode(T.self, from: data)
                 
                 completionHandler(.success(decodedResult))
             } catch {

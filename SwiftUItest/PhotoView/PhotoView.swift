@@ -21,7 +21,7 @@ struct PhotoView: View {
     ]
     
     var body: some View {
-      
+        
         NavigationView {
             VStack(alignment: .leading) {
                 HStack { SearchBar(searchText: $searchText, searching: $searching)
@@ -29,14 +29,14 @@ struct PhotoView: View {
                             if !searchText.isEmpty {
                                 viewModel.search(text: searchText)
                             }
-                           
+                            
                         }
                     Button("Search") {
                         if !searchText.isEmpty {
                             resignFirstResponder()
                             viewModel.search(text: searchText)
                         }
-                           
+                        
                         
                         searching = false
                     }.padding(.trailing, 10)
@@ -46,7 +46,6 @@ struct PhotoView: View {
                         ProgressBar().frame(width: 100 ,height: 100,alignment: .center)
                             .position(x: UIScreen.main.bounds.width/2)
                             .padding(.top, 100)
-                        
                     }
                     else {
                         LazyVGrid(columns: columns, content: {
@@ -54,12 +53,12 @@ struct PhotoView: View {
                                 ForEach (0..<data.imagesResults.endIndex, id: \.self) { index in
                                     NavigationLink {
                                         DetailsView(imageLink: data.imagesResults[index].original, array: data.imagesResults, index: data.imagesResults[index].id )
-                                            
+                                        
                                     } label: {
                                         KFImage(URL(string: data.imagesResults[index].thumbnail))
                                             .resizable()
                                             .scaledToFit()
-                                            
+                                        
                                     }      .opacity(appeared)
                                         .animation(Animation.easeInOut(duration: 3.0), value: appeared)
                                         .onAppear {self.appeared = 1.0}
@@ -76,7 +75,6 @@ struct PhotoView: View {
             .toolbar {
                 if searching {
                     Button("Cancel") {
-                        
                         searchText = ""
                         withAnimation {
                             resignFirstResponder()
